@@ -1,0 +1,167 @@
+{
+  "success": true,
+  "items": 12,
+  "data": [
+    {
+      "id": "62fcbb75a4191e36cd6fb0c3",
+      "name": "סלט על",
+      "category": "62fcbb75a4191e36cd6fb0ac",
+      "price": 42,
+      "imgUrl": "https://www.averiecooks.com/wp-content/uploads/2016/06/12superfoodssalad-9-735x735.jpg",
+      "times": {
+        "makeDays": 0,
+        "availableDaysOfWeek": [1, 2, 3, 4, 5, 6, 7],
+        "excludeDates": [
+          {
+            "date": "2022-10-20T06:00:58.591Z",
+            "id": "6301d1dbcc7d79098895d0ef"
+          },
+          {
+            "date": "2022-10-24T06:33:58.591Z",
+            "id": "6301d1dbcc7d79098895d1ef"
+          },
+          {
+            "date": "2022-10-25T07:33:58.591Z",
+            "id": "6301d1dbcc7d79098895d2ef"
+          },
+          {
+            "date": "2022-10-26T17:33:58.591Z",
+            "id": "6301d1dbcc7d79498895d2ef"
+          }
+        ]
+      }
+    },
+    {
+      "id": "62fcbb75a4191e36cd6fb0c7",
+      "name": "סלט אוליביה",
+      "category": "62fcbb75a4191e36cd6fb0ae",
+      "price": 24,
+      "imgUrl": "https://cdn.momsdish.com/wp-content/uploads/2012/10/Olivier-Potato-Salad-06-scaled.jpg",
+      "times": {
+        "makeDays": 1,
+        "availableDaysOfWeek": [1, 2, 3, 4, 5, 6, 7],
+        "excludeDates": []
+      }
+    },
+    {
+      "id": "62fcbb75a4191e36cd6fb0c6",
+      "name": "טחינה הר ברכה",
+      "category": "62fcbb75a4191e36cd6fb0ae",
+      "price": 17,
+      "imgUrl": "https://m.media-amazon.com/images/I/81y7x1M5ZsL.jpg",
+      "times": {
+        "makeDays": 1,
+        "availableDaysOfWeek": [1, 2, 3, 4, 5, 6, 7],
+        "excludeDates": []
+      }
+    },
+    {
+      "id": "62fcbb75a4191e36cd6fb0c0",
+      "name": "בראוניז שוקולד",
+      "category": "62fcbb75a4191e36cd6fb0b2",
+      "price": 24,
+      "imgUrl": "https://images.immediate.co.uk/production/volatile/sites/30/2020/10/Gooey-Brownies-5627e49.jpg?resize=768,574",
+      "times": {
+        "makeDays": 1,
+        "availableDaysOfWeek": [1, 2, 3, 4, 5, 6, 7],
+        "excludeDates": []
+      }
+    },
+    {
+      "id": "62fcbb75a4191e36cd6fb0c1",
+      "name": "חלה",
+      "category": "62fcbb75a4191e36cd6fb0b2",
+      "price": 20,
+      "imgUrl": "https://media.istockphoto.com/photos/challah-bread-isolated-on-white-background-with-clipping-path-picture-id92676285?k=20&m=92676285&s=612x612&w=0&h=3M3x29igwHkt80VmcmVMG-j_koEfPJwV0tcKWNcBqso=",
+      "times": {
+        "makeDays": 1,
+        "availableDaysOfWeek": [6],
+        "excludeDates": []
+      }
+    },
+    {
+      "id": "62fcbb75a4191e36cd6fb0cb",
+      "name": "מארז מתנה פסח",
+      "category": "62fcbb75a4191e36cd6fb0b0",
+      "price": 185,
+      "imgUrl": "https://giftsinisrael.com/wp-content/uploads/2019/04/Leolam-Hasdo-Passover-Gift-Basket-.jpg",
+      "times": {
+        "makeDays": 3,
+        "availableDaysOfWeek": [1, 2, 3, 4, 5, 6, 7],
+        "excludeDates": []
+      }
+    },
+    {
+      "id": "62fcbb75a4191e36cd6fb0ca",
+      "name": "סל מתנה לשבועות",
+      "category": "62fcbb75a4191e36cd6fb0b0",
+      "price": 230,
+      "imgUrl": "https://images.maariv.co.il/image/upload/f_auto,fl_lossy/c_fill,g_faces:center,h_912,w_1200/729179",
+      "times": {
+        "makeDays": 3,
+        "availableDaysOfWeek": [1, 2, 3, 4, 5, 6, 7],
+        "excludeDates": []
+      }
+    },
+    {
+      "id": "62fcbb75a4191e36cd6fb0c9",
+      "name": "מארז ראש השנה",
+      "category": "62fcbb75a4191e36cd6fb0b0",
+      "price": 200,
+      "imgUrl": "https://israelifooddirect.com/wp-content/uploads/2021/07/Abundant-Rosh-Hashanah-Gift-Basket.jpg",
+      "times": {
+        "makeDays": 3,
+        "availableDaysOfWeek": [1, 2, 3, 4, 5, 6, 7],
+        "excludeDates": []
+      }
+    },
+    {
+      "id": "62fcbb75a4191e36cd6fb0c5",
+      "name": "כבד קצוץ",
+      "category": "62fcbb75a4191e36cd6fb0ae",
+      "price": 26,
+      "imgUrl": "https://healthyrecipesblogs.com/wp-content/uploads/2014/10/chopped-liver-featured-2021.jpg",
+      "times": {
+        "makeDays": 1,
+        "availableDaysOfWeek": [1, 2, 3, 4, 5, 6, 7],
+        "excludeDates": []
+      }
+    },
+    {
+      "id": "62fcbb75a4191e36cd6fb0c2",
+      "name": "קובנה",
+      "category": "62fcbb75a4191e36cd6fb0b2",
+      "price": 49,
+      "imgUrl": "https://medias.hashulchan.co.il/www/uploads/2015/12/650_500105-600x600-1545114747.jpg",
+      "times": {
+        "makeDays": 1,
+        "availableDaysOfWeek": [6, 7],
+        "excludeDates": []
+      }
+    },
+    {
+      "id": "62fcbb76a4191e36cd6fb0cd",
+      "name": "כריך פטה",
+      "category": "62fcbb75a4191e36cd6fb0ac",
+      "price": 28,
+      "imgUrl": "https://www.budgetbytes.com/wp-content/uploads/2022/01/Spinach-and-Feta-Grilled-Cheese-stack.jpg",
+      "times": {
+        "makeDays": 1,
+        "availableDaysOfWeek": [1, 2, 3, 4, 5, 6, 7],
+        "excludeDates": []
+      }
+    },
+    {
+      "id": "62fcbb76a4191e36cd6fb0cc",
+      "name": "סלט יווני",
+      "category": "62fcbb75a4191e36cd6fb0ac",
+      "price": 42,
+      "imgUrl": "https://www.simplyrecipes.com/thmb/au60mVTA5EPLLknjdtQ9BYO0OC4=/1067x1067/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2011__08__dads-greek-salad-horiz-a-1600-bc71b85bc907414a9bb3179a923b58fc.jpg",
+      "times": {
+        "makeDays": 1,
+        "availableDaysOfWeek": [1, 2, 3, 4, 5, 6, 7],
+        "excludeDates": []
+      }
+    }
+  ]
+}
