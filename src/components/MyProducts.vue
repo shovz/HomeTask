@@ -9,10 +9,9 @@
       rounded-md 
       flex 
       flex-col
-      items-center	
-      "
+      items-center"
     >
-      <h4>{{ item.name }}</h4>
+      <h4 class="mb-3 font-rubik">{{ item.name }}</h4>
       <h4>price : {{ item.price }}</h4>
       <h4>makeDays : {{ item.times.makeDays }}</h4>
       <img class="p-2 md:w-32 lg:w-36 xl:w-48" :src="item.imgUrl" :alt="item.name" />
@@ -22,6 +21,6 @@
 
 <script>
 export default {
-  props: ["filteredData", "date"],
+  props: ["filteredData"],
 };
 </script>

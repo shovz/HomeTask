@@ -1,110 +1,68 @@
 <template>
-  <div class="flex  flex-col  items-center mt-4">
-    <div class="flex  flex-col items-center justify-center mb-4">
-      <Datepicker
-        v-model="date"
-        :minDate="new Date()"
-        :maxDate="endDate"
-        @update:modelValue="handleDate"
-
-        showNowButton
-        :enableTimePicker="false"
-         :textInputOptions="textInputOptions"
-      ></Datepicker>
-      <div class="mx-10 w-fit" v-if="filteredData.length">
-        <h4>
-          Selected Date : {{ date.getDate() }} / {{ date.getMonth() + 1 }} /
-          {{ date.getFullYear() }}
-        </h4>
-      </div>
-    </div>
-    <MyProducts :filteredData="filteredData" :date="date" />
+  <div class="flex flex-col items-center mt-4 font-serif">
+    <DatePicker @selected-date="handleFilter($event)" />
+    <MyProducts :filteredData="filteredData" />
   </div>
 </template>
 
 <script>
 import api from "./api.json";
 import MyProducts from "./components/MyProducts.vue";
-import Datepicker from "@vuepic/vue-datepicker";
-import "@vuepic/vue-datepicker/dist/main.css";
-import { ref } from 'vue';
+import DatePicker from "./components/DatePicker.vue";
 
 export default {
-  name: "App",
   components: {
-    Datepicker,
+    DatePicker,
     MyProducts,
   },
   data() {
     return {
-      apiData: api.data,
-      filteredData: [],
+      filteredData: api.data,
     };
   },
   methods: {
-    handleDate() {
+    handleFilter(date) {
+      // checking diff between selected date and current date in days
       const time = Math.floor(
-        (this.date.getTime() - new Date().getTime()) / (24 * 3600 * 1000)
+        (date.getTime() - new Date().getTime()) / (24 * 3600 * 1000)
       );
 
-      this.filteredData = this.apiData.filter((item) => {
-        if (time + 1 >= item.times.makeDays) {
-          if (this.checkavailableDays(item)) {
-            if (this.checkExcludedDays(item)) {
-              return item;
+      this.filteredData = api.data.filter((item) => {
+        if (time + 1 >= item.times.makeDays) { // 1st condition check 
+          if (this.checkAvailableDays(item, date)) { // 2nd condition check
+            if (this.checkExcludedDays(item, date)) { // 3rd condition check
+              return item; // if item passes all 3 conditions it will enter the array
             }
           }
         }
       });
     },
-    checkavailableDays(item) {
+    checkAvailableDays(item, date) {
+       //returns true if the item can be provided on the selected day of the week
       return item.times.availableDaysOfWeek.some(
-        (weekday) => weekday === this.date.getDay() + 1
+        (dayOfWeek) => dayOfWeek === date.getDay() + 1 
       );
     },
-    checkExcludedDays(item) {
-      if (item.times.excludeDates.length) {
-        return !item.times.excludeDates.some((exDate) => {
+    checkExcludedDays(item, date) {
+      // returns true if the selected date is not on the excluded dates of the item
+      if (item.times.excludeDates.length) { //check if there are any excluded dates
+        return !item.times.excludeDates.some((exDate) => { // returns false if the selected date is an excluded date 
           const tempTime = new Date(exDate.date);
           const month = tempTime.getMonth() + 1;
           const year = tempTime.getFullYear();
-          const weekDay = tempTime.getDate();
+          const dayOfWeek = tempTime.getDate();
 
           if (
-            year === this.date.getFullYear() &&
-            month === this.date.getMonth() + 1 &&
-            weekDay === this.date.getDate()
+            year === date.getFullYear() &&
+            month === date.getMonth() + 1 &&
+            dayOfWeek === date.getDate()
           ) {
-            console.log("tempTime", weekDay, month, year);
-            console.log(
-              "this.date",
-              this.date.getDate(),
-              this.date.getMonth() + 1,
-              this.date.getFullYear()
-            );
             return true;
           }
         });
       }
       return true;
     },
-  },
-  setup() {
-    const date = new Date();
-    const endDate = new Date();
-    endDate.setDate(endDate.getDate() + 14);
-    // const format = () => {
-    //   return `Select Date`;
-    // };
-    const textInputOptions = ref({
-          format: 'MM.dd.yyyy'
-        })
-    return {
-      date,
-      endDate,
-      // format,
-      textInputOptions
-    };
   },
 };
 </script>
