@@ -5,7 +5,7 @@
       v-model="date"
       :minDate="new Date()"
       :maxDate="endDate"
-      @update:modelValue="handleDate()"
+      @update:modelValue="handleDate()" 
       showNowButton
       :enableTimePicker="false"
     ></Datepicker>

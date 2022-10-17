@@ -1,12 +1,13 @@
 <template>
   <div class="flex flex-col items-center mt-4 font-serif">
+    <h3>Select delivery date : </h3>
     <DatePicker @selected-date="handleFilter($event)" />
     <MyProducts :filteredData="filteredData" />
   </div>
 </template>
 
 <script>
-import api from "./api.json";
+import api from "./assets/api.json";
 import MyProducts from "./components/MyProducts.vue";
 import DatePicker from "./components/DatePicker.vue";
 
